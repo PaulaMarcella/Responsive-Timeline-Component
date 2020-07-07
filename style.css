@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  color: black;
+  font-family: "Titillium Web", sans-serif;
+}
+.timeline {
+  text-align: center;
+  position: relative;
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 1300px;
+}
+.timeline:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  border: 2px solid blue;
+  left: 40px;
+  top: 0;
+}
+.timeline:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (min-width: 700px) {
+  .timeline {
+    padding: 2rem;
+  }
+  .timeline:before {
+    left: calc(50% - 2px);
+    right: auto;
+  }
+}
+.timeline__item {
+  padding: 2rem;
+  position: relative;
+  margin: 1rem 3rem 1rem 1rem;
+  clear: both;
+}
+.timeline__item:after,
+.timeline__item:before {
+  content: "";
+  position: absolute;
+}
+
+@media screen and (min-width: 700px) {
+  .timeline__item {
+    width: 44%;
+    margin: 1rem;
+  }
+  .timeline__item:nth-of-type(2n) {
+    float: right;
+    margin: 1rem;
+  }
+  /* .timeline__item:nth-of-type(2n):before {
+    right: auto;
+    left: -10px;
+  } */
+}
+.timeline__item--circle {
+  padding: 2rem;
+  position: relative;
+  margin: 1rem 3rem 1rem 1rem;
+  clear: both;
+  padding: 0px;
+  border: 3px solid blue;
+  border-radius: 100%;
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  z-index: 200;
+  top: 85px;
+}
+.timeline__item--circle:before {
+  display: none;
+}
+@media screen and (min-width: 700px) {
+  .timeline__item--circle {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .timeline__item--circle:nth-of-type(2n) {
+    float: none;
+    margin: 0 auto;
+    border-image: none;
+  }
+}
+
+.timeline__year {
+  margin: 0;
+  font-size: 1.5em;
+}
+.timeline__blurb {
+  margin: 0.5rem 0 0;
+}
