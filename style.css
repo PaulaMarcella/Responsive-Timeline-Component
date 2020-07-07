@@ -6,7 +6,6 @@ body {
   font-family: "Titillium Web", sans-serif;
 }
 .timeline {
-  text-align: center;
   position: relative;
   padding: 1rem;
   margin: 0 auto;
@@ -27,6 +26,7 @@ body {
 }
 @media screen and (min-width: 700px) {
   .timeline {
+    text-align: center;
     padding: 2rem;
   }
   .timeline:before {
@@ -35,9 +35,9 @@ body {
   }
 }
 .timeline__item {
-  padding: 2rem;
   position: relative;
-  margin: 1rem 3rem 1rem 1rem;
+  margin: 1rem;
+  padding-left: 3rem;
   clear: both;
 }
 .timeline__item:after,
@@ -61,18 +61,17 @@ body {
   } */
 }
 .timeline__item--circle {
-  padding: 2rem;
+  display: block;
   position: relative;
-  margin: 1rem 3rem 1rem 1rem;
+  margin: 0rem 3rem 0rem 1rem;
   clear: both;
-  padding: 0px;
   border: 3px solid blue;
   border-radius: 100%;
   background-color: #fff;
   width: 20px;
   height: 20px;
   z-index: 200;
-  top: 85px;
+  top: 45px;
 }
 .timeline__item--circle:before {
   display: none;
@@ -85,7 +84,6 @@ body {
   .timeline__item--circle:nth-of-type(2n) {
     float: none;
     margin: 0 auto;
-    border-image: none;
   }
 }
 
@@ -93,6 +91,6 @@ body {
   margin: 0;
   font-size: 1.5em;
 }
-.timeline__blurb {
+.timeline__text {
   margin: 0.5rem 0 0;
 }
